@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+$color: #fff;
+$cor_texto: #000;
+$preto1: #565658;
+
+body{
+	background: $color !important;
+}
+
+/*FORMATAÇÃO BASICA H1*/
+@mixin formatacaoh1{
+		font-family: 'Roboto', sans-serif !important;
+		text-align: center;
+		font-size:2em;
+		position: relative;
+		color: $cor_texto;
+}
+
+/*FORMATAÇÃO BASICA H3*/
+@mixin formatacaoh3{
+	font-family: 'Roboto', sans-serif !important;
+	text-align: center;
+	font-size: 1.5em;
+	text-decoration: none;
+	&:hover{color:$preto1;}
+}
+
+.introducao{
+	text-align: center;
+	 h1{
+		 @include formatacaoh1;
+	}
+	 h3{
+		@include formatacaoh3;
+	}
+}
+
+.home{
+	text-align: center;
+	a{
+		text-decoration:none !important;
+		color: $cor_texto !important;
+		hover{
+			text-decoration:none !important;
+			color: $cor_texto !important;
+		}
+		link{
+			text-decoration:none !important;
+			color: $cor_texto !important;
+		}
+	}
+}
+.origem{
+	font-family: 'Roboto', sans-serif !important;
+	h1{
+		 @include formatacaoh1;
+	}
+	h3{
+		@include formatacaoh3;
+	}
+}
