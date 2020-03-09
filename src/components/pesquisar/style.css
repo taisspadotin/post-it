@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+.listagem{
+	background: #dcdcdc90;
+	margin-top: 20px;
+	font-family: 'Roboto', sans-serif !important;
+	margin-bottom:40px;
+}
+.listagem h2{
+	text-align:center;
+	background: #f7f7f7;
+	margin:0;
+}
+.listagem ul{
+	list-style: none;
+	text-align:center;
+	padding: 0 !important;
+	
+}
+.listagem ul li{
+	margin: 0 !important;
+	width: 100%;
+	
+	position: relative;
+}

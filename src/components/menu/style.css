@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+nav{
+	/*background-color: #66729e !important;*/
+	background: #495e96;
+	border-bottom:1px solid #afbcd870;
+	}
+nav a{
+	color:white !important;
+	width: 150px;
+	text-shadow: 0px 0px 2px black;
+	text-align: center;
+	font-family: 'Roboto', sans-serif !important;
+}
+nav a:hover{
+	color: #cdcdcd !important;
+	text-shadow: 1px 1px 2px black, 0 0 1em blue, 0 0 0.2em blue;
+	font-family: 'Roboto', sans-serif !important;
+}
