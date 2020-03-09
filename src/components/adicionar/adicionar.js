@@ -66,12 +66,14 @@ export default class Adicionar extends Component{
 			//this.setState({indicador[i]: 1});
 			this.setState({seta:true});
 			this.editar[i].style.display='flex';
+			this.textArea[i].style.height = "50%";
 		}
 		if(op == 2){
 			this.indicador[i] = false;
 			//this.setState({indicador[i]: 2});
 			this.setState({seta:false});
 			this.editar[i].style.display='none';
+			this.textArea[i].style.height = "80%";
 		}
 	}
 	
@@ -107,6 +109,7 @@ export default class Adicionar extends Component{
 		this.texto[i].remove();
 		//this.texto[i].parentNode.removeChild(this.texto[i]);
 		//this.setState({qtd: qtd_nova});
+		
 		
 	}
 	
