@@ -5,27 +5,9 @@ import './style.scss';
 import { Card, Icon } from 'semantic-ui-react'
 
 var exibepag = 0; 
-window.onscroll = function (){ //função  executada quando a pagina for rolada
-			 //pegando o tamanho da pagina
-			 //console.log(window.innerHeight);
-			 //console.log(window.pageYOffset);
-			 if(exibepag == 0){
-				if(window.pageYOffset > 10 && window.pageYOffset < 200){
-					//alert('surgir');
-					document.getElementById('navegacao_inicial').style.background = '#b8cfdf';
-					exibepag = 1;
-				}
-			 }
-			 else{
-				 if(window.pageYOffset == 0)//se a pessoa voltou para o começo
-				 {
-					 document.getElementById('navegacao_inicial').style.background = 'none';
-					 exibepag = 0;
-				 }
-			 }
-			 //fazer para quando da f5
-			 
-			};
+var pag = 'vs';
+
+
 
 
 class CardClasse extends Component{
@@ -112,7 +94,27 @@ class Menu extends Component{
 	}
 	componentDidMount(){
 		
-
+	window.onscroll = function (){ //função  executada quando a pagina for rolada
+			 //pegando o tamanho da pagina
+			 //console.log(window.innerHeight);
+			 //console.log(window.pageYOffset);
+			 if(exibepag == 0){
+				if(window.pageYOffset > 10 && window.pageYOffset < 200){
+					//alert('surgir');
+					document.getElementById('navegacao_inicial').style.background = '#b8cfdf';
+					exibepag = 1;
+				}
+			 }
+			 else{
+				 if(window.pageYOffset == 0)//se a pessoa voltou para o começo
+				 {
+					 document.getElementById('navegacao_inicial').style.background = 'none';
+					 exibepag = 0;
+				 }
+			 }
+			 //fazer para quando da f5
+			 
+			};
 	}
 	render(){
 		return(
@@ -152,6 +154,7 @@ class TelaInicial extends Component{
 	render(){
 		return(
 		<>
+		<div id="visibilidade">
 			<div className="corpo_inicio">
 				<Menu/>
 				<br/>
@@ -164,6 +167,7 @@ class TelaInicial extends Component{
 				{/*</div>	*/}
 				<SegundoConteudo/>
 				<Rodape/>
+		</div>		
 			</>
 		)
 	}
