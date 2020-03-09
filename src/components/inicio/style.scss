@@ -1,0 +1,106 @@
+/*Definições de variaveis*/
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+$azul1: #0e61ab;
+
+#navegacao_inicial{
+	background:none;
+	border: none;
+	position: fixed;
+	width:100%;
+	z-index: 9999;
+}
+
+#navegacao_inicial a{
+	width:40%;
+	font-family: 'Roboto', sans-serif;
+	&:hover{
+		color: $azul1 !important;
+		/*text-shadow: 0px 0px 2px black;*/
+		text-shadow: none;
+	}
+}
+
+.corpo_inicio{
+	min-height: 100px;
+	height:400px;
+	background: url("pedra.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+@media only screen and (max-width: 920px) {
+	background-size: cover;
+}
+.inferior{
+	background: #fff;
+	/*position: absolute;
+	z-index: 9999;
+	width:90%;*/
+	min-height: 400px;
+	/*margin-left: 5%;
+	margin-right: 5%;
+	border: 1px solid #dcdcdc;
+	border-radius: 10px;*/
+	/*margin-top: 550px;*/
+	
+	
+}
+
+/*.conteudo_home{
+	background: #fff;
+	
+	width:100%;
+	margin-top: 550px;
+}*/
+
+.cards{
+	margin-top:100px !important;
+}
+.conteudo2{
+	width:100%;
+	background: #dcdcdc;
+	min-height: 300px;
+}
+.lateralzinha{
+	background:#f67660;
+	min-height: 300px;
+}
+.about h2{
+	text-align: center;
+	font-family: 'Roboto', sans-serif;
+	margin-top: 20px;
+	color: #171b1c;
+}
+.apresentacao{
+ /*height:550px;*/
+	width: 100%;
+	text-align:center;
+}
+.apresentacao h2{
+	/*text-align: left;*/
+	font-family: 'Roboto', sans-serif;
+	margin-top: 20px;
+	color: #fff;
+	font-size:3em;
+	margin-top:200px;
+	text-shadow: 2px 2px 2px #000;
+	/*margin-left: 49%;*/
+}
+
+.laranjinha{
+	color: #fff;
+	font-family: 'Roboto', sans-serif;
+	margin: 10px;
+	text-align: center;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+.rodape{
+	height:60px;
+	text-align:center;
+	background-image: linear-gradient(to right, #b8cfdf, #fff);
+	h3{
+		/*margin-top: 22px;*/
+		color:#81736f;
+		font-size: 1.2em;
+	}
+}
