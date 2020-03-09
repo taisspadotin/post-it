@@ -113,3 +113,15 @@ $fundo: #fff;
 
 /*------------------------------------------------------------------------------*/
 
+.Titulo{
+		h2{
+			font-family: 'Roboto', sans-serif;
+			color: $inputcolor;
+			font-size: 1.5em;
+		}
+		h3{
+			font-family: 'Roboto', sans-serif;
+			font-size: 1.2em;
+			text-decoration: none;
+		}
+	}

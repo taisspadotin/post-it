@@ -44,6 +44,7 @@ class Formulario extends Component{
 		this.state = {
 			nome: '',
 			ultimo_nome: '',
+			icone: ''
 		};
 
 		this.handleChangeNome = this.handleChangeNome.bind(this);
@@ -88,7 +89,22 @@ class Formulario extends Component{
 		// auto-foca o input na montagem
 		this.focusTextInput();
 	  }
+	  VerSenha = (op) =>{
+		  if(op === 1){
+			  this.setState({icone: 2});
+			  //alterar o tipo do campo
+		  }
+		  else if(op === 2){
+			  this.setState({icone: 1});
+		  }
+	  }
 	render(){
+		let icone = '';
+		if((this.state.icone == '') || (this.state.icone == '1')){
+			icone = <i style={{ paddingLeft: '5px', fontSize:'1.6em'}} onClick={()=>this.VerSenha(1)} className="eye slash icon"></i>;
+		}else{
+			icone = <i style={{ paddingLeft: '5px', fontSize:'1.6em'}} onClick={()=>this.VerSenha(2)} className="eye icon"></i>;
+		}
 			return(
 			<div>
 				<br/>
@@ -119,6 +135,11 @@ class Formulario extends Component{
 				</form>*/}
 				<TabInicio/>
 				<div id="cadastro">
+				<Row className="show-grid my-4">
+					<Col className="Titulo">
+					<h3>Preencha os dados corretamente para realizar o cadastro de pessoa</h3>
+					</Col>
+				</Row>
 				<Row className="show-grid my-2">
 					<Col>
 						<div className="label-float">
@@ -165,9 +186,33 @@ class Formulario extends Component{
 					</Col>*/}
 					
 				</Row>	
+				<Row className="show-grid my-4">
+					<Col  align="center">
+						<button className="ui button">Limpar</button>
+						<button className="ui button">Submit</button>
+					</Col>	
+				</Row>
 			</div>
 			
-			<div id='usuario' style={{display: 'none'}}>usuario</div>
+			<div id='usuario' style={{display: 'none'}}>
+				<Row className="show-grid my-4">
+					<Col xs={12} md={6}>
+						<div className="label-float">
+							<input type="text"  placeholder=" " />
+							<label>Usuário</label>
+						</div>
+					</Col>
+					<Col xs={12} md={6}>
+						<div className="label-float">
+							<input type="password"  placeholder=" " style={{width: '90%'}}/>
+							<label>Senha</label>
+							{icone}
+						</div>
+					</Col>
+					
+				</Row>
+			</div>
+				
 			</div>
 			)
 	}
