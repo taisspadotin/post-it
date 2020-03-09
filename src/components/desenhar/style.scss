@@ -1,0 +1,53 @@
+$cinza1: #dcdcdc;
+$cinza2: #bbbbbb;
+$cinza_claro: #f7f7f6;
+
+@mixin cores{
+	width:90%;
+	height:30px;
+	margin: 2px;
+	border:1px solid #000;
+}
+.cores{
+	width: 40px;
+	height: 333px;
+	background: $cinza1;
+	float: right;
+	border: 1px solid $cinza2;
+	margin-top: 10px;
+	.c1{
+		@include cores;
+		background: red;
+	}
+	.c2{
+		@include cores;
+		background: blue;
+	}
+	.c3{
+		@include cores;
+		background: green;
+	}
+	.c4{
+		@include cores;
+		background: #000;
+	}
+	.c5{
+		@include cores;
+		background: #fff;
+	}
+	.c6{
+		@include cores;
+		background: pink;
+	}
+	.lixo{
+		@include cores;
+		font-size:1.5em;
+		
+	}
+}
+.painel{
+	margin-top: 10px;
+	background: $cinza_claro;
+	border: 1px solid $cinza1;
+	width: 90%;
+}

@@ -1,0 +1,174 @@
+$cinza1: #dcdcdc;
+$branco: #fff;
+$cor_base: #495e96;
+$rosapastel: #e0bbe4;
+$rosamaisesc: #d3bedd;
+$verde: #cafecd;
+$azul: #bee4e7;
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script|Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Trade+Winds&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Caveat|Pacifico|Righteous|Shadows+Into+Light&display=swap');
+.tela{
+	background: $cinza1;
+	height: 400px;
+	width:100%;
+	margin-top:10px;
+	margin-bottom: 10px;
+	font-family: 'Roboto', sans-serif;
+}
+.iconeAdd{
+	margin-left:10px;
+	background: $cor_base;
+	width:20px;
+	border-radius: 10px;
+	text-align: center;
+	color: $branco;
+	cursor: pointer;
+	i{
+		width:100%;
+	}
+	float:left;
+}
+.texto{
+	background: $rosapastel;
+	width: 200px;
+	height: 200px;
+	margin-left: 10px;
+	margin-top: 10px;
+	position:absolute;
+	margin-right: 10px;
+	box-shadow: 2px 2px 4px #000000;
+	.cabecalho{
+		/*background:$rosamaisesc;*/
+		background: #81818120;
+		/*opacity: 0.2;*/
+		height:30px;
+		border-bottom:1px solid #cdcdcd;
+		i{
+			color: #5a5a5a;
+			opacity: 0.9;
+			text-shadow:none;
+			margin-top: 5px;
+			&:hover{
+				color:#818181;
+			}
+		}
+	}
+}
+.conteudo{
+   /*display: flex;
+   justify-content: space-between;*/
+    box-sizing: border-box;
+   max-height: 400px;
+   input[type=text]{
+   background:none;
+   border: none;
+   width: 100%;
+   height: 400px;
+   }
+   textarea{
+	   background:none;
+	   border: none;
+	   width: 100%;
+	   height: 100%;
+	   font-family: 'Indie Flower', cursive;
+	   color: #3b3b3b;
+	   font-size: 1.3em;
+   }
+}
+
+.totalizacao{
+	float: right;
+	width: 10%;
+	position: relative;
+	marin-top: 10px;
+}
+@mixin cores{
+	width: 20%;
+	height:40px;
+}
+@mixin fontes{
+	width: 20%;
+	height:25px;
+	border: thin solid #818181;
+}
+.editar{
+	
+	background: #81818130;
+	height: 65px;
+	width: 100%;
+	/*border-bottom: 1px solid #5a5a5a;*/
+	display:none;
+	box-sizing: border-box;
+	flex-wrap: wrap;
+	
+	.linha1{
+		width: 100%;
+		height: 40px;
+		display: flex;
+		justify-content: space-between;
+		.cor1{
+			background: $verde;
+			@include cores;
+		}
+		.cor2{
+			background: $azul;
+			@include cores;
+		}
+		.cor3{
+			background: #ffd6b8;
+			@include cores;
+		}
+		.cor4{
+			background: $rosapastel;
+			@include cores;
+		}
+		.cor5{
+			background: #fbfcd0;
+			@include cores;
+		}
+		.cor6{
+			background: #ebf4f3;
+			@include cores;
+		}
+	}
+	.linha2{
+		width: 100%;
+		height: 25px;
+		display: flex;
+		justify-content: space-between;
+		.fonte1{
+			text-align:center;
+			font-family: 'Trade Winds', cursive;
+			@include fontes;
+		}
+		.fonte2{
+			text-align:center;
+			font-family: 'Roboto', sans-serif;
+			@include fontes;
+		}
+		.fonte3{
+			text-align:center;
+			font-family: 'Dancing Script', cursive;
+			@include fontes;
+		}
+		.fonte4{
+			text-align:center;
+			font-family: 'Caveat', cursive;
+			@include fontes;
+		}
+		.fonte5{
+			text-align:center;
+			font-family: 'Pacifico', cursive;
+			@include fontes;
+		}
+		.fonte6{
+			text-align:center;
+			font-family: 'Righteous', cursive;
+			@include fontes;
+		}
+	}
+	
+}
